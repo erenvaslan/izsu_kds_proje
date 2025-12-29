@@ -1,0 +1,31 @@
+{
+  "name": "kds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "dev:all": "concurrently \"npm:dev\" \"npm --prefix web run dev\"",
+    "start": "node src/server.js",
+    "test": "echo \"No tests\" && exit 0",
+    "db:test": "node scripts/dbtest.js",
+    "db:init": "node scripts/dbinit.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.15.1",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "concurrently": "^9.1.0"
+  }
+}
